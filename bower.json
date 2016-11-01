@@ -1,0 +1,40 @@
+{
+  "name": "user_management",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "@PallaviVerma"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "angular": "",
+    "bootstrap": "",
+    "angular-bootstrap": "",
+    "angular-ui-router": "",
+    "jquery": "",
+    "datatables": "",
+    "angular-datatables": "",
+    "angular-nanoscroller": "",
+    "angular-animate": "",
+    "angular-toastr": "",
+    "angular-messages": "",
+    "ng-file-upload": "",
+    "gm.datepicker-multi-select": ""
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": ""
+  }
+}
