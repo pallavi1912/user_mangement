@@ -18,7 +18,7 @@
     "test",
     "tests"
   ],
-   "dependencies": {
+  "dependencies": {
     "angular": "",
     "bootstrap": "",
     "angular-bootstrap": "",
@@ -31,7 +31,7 @@
     "angular-toastr": "",
     "angular-messages": "",
     "ng-file-upload": "",
-    "gm.datepicker-multi-select": ""
+    "angular-ui-validate": "~1.2.2"
   },
   "devDependencies": {},
   "resolutions": {
