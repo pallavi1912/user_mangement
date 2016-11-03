@@ -12,8 +12,7 @@ module.exports = angular.module('User', [])
             .state('login', {
                 url: "/login",
                 template: require('./templates/login.html'),
-                // templateUrl: './templates/login.html',
-                // controller: 'LoginController as vm',
+                controller: 'LoginController as vm',
                 // pageTitle: 'login-page'
             })
             .state('dashboard', {
@@ -27,4 +26,6 @@ module.exports = angular.module('User', [])
                 //     }]
                 // }
             })
-    }]);
+    }])
+    .controller('LoginController', require("./controllers/loginController.js"))
+    .service('LoginService', require("./services/logInService.js"));
