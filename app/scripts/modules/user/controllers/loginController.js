@@ -6,7 +6,7 @@ module.exports = [
 'LoginService',
 function($scope,$state,$rootscope,LoginService){
 	var vm=this;
-	
+	var loginPermission=false;
 	vm.logIn=function(){
 		// var data = LoginService.getUserDetails();
 		// console.log("user data", data.name,data.password);
@@ -14,14 +14,17 @@ function($scope,$state,$rootscope,LoginService){
 			name:vm.userName,
 			password:vm.password
 		}
-		var permissionGranted=LoginService.loginPermission(data);
-		if(permissionGranted === true){
-			$state.go('dashboard');
-			
+		var userDetails=LoginService.loginPermission(data);
+		console.log("details",userDetails);
+		if(Object.keys(userDetails).length === 0){
+			loginPermission=false;
+			console.log("unsuccessful",loginPermission);	
 		}
 		else
 		{  
-			console.log("unsuccessful");
+			loginPermission=true;
+			console.log("successful",loginPermission);
+			$state.go('dashboard');
 		}
 			
 		}
