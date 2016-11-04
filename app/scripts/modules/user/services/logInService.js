@@ -9,10 +9,15 @@ function(){
 	return data;
   };
   function loginPermission(data){
+  	var permission = false;
      if(data.name === getUserDetails().name && data.password === getUserDetails().password){
+     	permission = true;
      	console.log("sucessful");
-     } else
-     console.log("unsuccessful");
+     } else{
+        permission = false;
+     	console.log("unsuccessful");
+     }
+     return permission;
   }
   return{
   	getUserDetails:getUserDetails,
