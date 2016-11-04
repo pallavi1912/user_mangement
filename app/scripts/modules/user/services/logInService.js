@@ -8,8 +8,15 @@ function(){
 	};
 	return data;
   };
+  function loginPermission(data){
+     if(data.name === getUserDetails().name && data.password === getUserDetails().password){
+     	console.log("sucessful");
+     } else
+     console.log("unsuccessful");
+  }
   return{
-  	getUserDetails:getUserDetails
+  	getUserDetails:getUserDetails,
+  	loginPermission:loginPermission
   };
 }
 ]
