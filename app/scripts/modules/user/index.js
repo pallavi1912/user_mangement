@@ -17,9 +17,9 @@ module.exports = angular.module('User', [])
             })
             .state('dashboard', {
                 url: "/dashboard",
-                abstract: true,
-                template: require('./templates/dashboard.html')
-                // controller: 'AbstractController as vm',
+                // abstract: true,
+                template: require('./templates/dashboard.html'),
+                controller: 'DashboardController as vm'
                 // resolve: {
                 //     userInfo: ['UserService', function(UserService) {
                 //         return UserService.getUserInfo();
@@ -28,4 +28,5 @@ module.exports = angular.module('User', [])
             })
     }])
     .controller('LoginController', require("./controllers/loginController.js"))
+    .controller('DashboardController', require("./controllers/dashboardController.js"))
     .service('LoginService', require("./services/logInService.js"));
