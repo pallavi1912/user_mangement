@@ -12,8 +12,7 @@ module.exports = [
                 name: "Rajesh",
                 password: "xyz",
                 access: "user"
-            },
-            , {
+            }, {
                 name: "Deblina",
                 password: "desi",
                 access: "user"
@@ -26,6 +25,7 @@ module.exports = [
             var userData = getUserDetails();
             for (var i = 0; i < userData.length; i++) {
                 if (data.name === userData[i].name && data.password === userData[i].password) {
+                    console.log("data from service",userData[i]);
                     userDetails = {
                         name: userData[i].name,
                         password: userData[i].password,
@@ -33,10 +33,7 @@ module.exports = [
                     };
                     currentUserDetails=userDetails;
                     console.log("sucessful");
-                }
-                else{
-                	userDetails={};
-                	console.log("unsuccessful");
+                    break;
                 }
             }
             return userDetails;
